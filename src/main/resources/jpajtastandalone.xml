@@ -27,7 +27,7 @@
         <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
         <properties>
             <property name="hibernate.transaction.manager_lookup_class"
-                      value="org.hibernate.transaction.JBossTSStandaloneTransactionManagerLookup"/>
+                      value="org.hibernate.transaction.JBossTSStandaloneTransactionManagerLookup" />
         </properties>
     </persistence-unit>
 </persistence>

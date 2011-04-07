@@ -1,0 +1,11 @@
+This is an example domain model mapped on HibernateOGM and using Hibernate Search to provide the query functionalities needed for the Twitter demo,
+planned as Keynote presentation of JBoss World 2011 in Boston.
+
+Shows how to configure Hibernate OGM, Infinispan, the JBoss Transaction Manager, and how queries could be implemented to load the required statistics;
+please get in touch for any explanation needed, on the mailing list, forums or irc:
+
+https://forum.hibernate.org/
+http://hibernate.org/community/mailinglists
+http://hibernate.org/community/irc
+
+-- Sanne

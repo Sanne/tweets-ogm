@@ -25,3 +25,6 @@ atlassian-ide-plugin.xml
 # Miscellaneous
 *.log
 .clover
+
+# Index
+tweets

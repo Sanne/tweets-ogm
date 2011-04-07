@@ -8,6 +8,7 @@
     <description>Storing Twitter entities on HibernateOGM and integrate Search to extract keyword statistics</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jgroups.bind_addr>127.0.0.1</jgroups.bind_addr>
     </properties>
     <developers>
         <developer>
@@ -24,15 +25,16 @@
             <version>3.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
+            <groupId>org.hibernate.ogm</groupId>
+            <artifactId>hibernate-ogm-core</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-search</artifactId>
             <version>3.4.0.CR2</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>solr-analysis-extras</artifactId>
-                    <groupId>org.apache.solr</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.infinispan</groupId>
@@ -240,6 +242,16 @@
                     <version>2.7.2</version>
                     <configuration>
                         <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                        <systemProperties>
+                            <property>
+                                <name>jgroups.bind_addr</name>
+                                <value>${jgroups.bind_addr}</value>
+                            </property>
+                            <property>
+                                <name>java.net.preferIPv4Stack</name>
+                                <value>true</value>
+                            </property>
+                        </systemProperties>
                     </configuration>
                 </plugin>
                 <plugin>
