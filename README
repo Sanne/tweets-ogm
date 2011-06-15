@@ -1,8 +1,29 @@
-This is an example domain model mapped on HibernateOGM and using Hibernate Search to provide the query functionalities needed for the Twitter demo,
-planned as Keynote presentation of JBoss World 2011 in Boston.
+First, I'd suggest to read the related blogpost first:
+http://in.relation.to/Bloggers/WhatYouDidNotSeeAtTheJBossWorld2011KeynoteDemo
 
-Shows how to configure Hibernate OGM, Infinispan, the JBoss Transaction Manager, and how queries could be implemented to load the required statistics;
-please get in touch for any explanation needed, on the mailing list, forums or irc:
+And see the recording of the demo we made in Boston 2011, at the JBoss World keynote:
+http://www.jboss.org/jbw2011keynote.html
+
+This is an example domain model mapped on HibernateOGM and using Hibernate Search
+to provide the query functionalities needed for the Twitter demo, and approximately
+represents the model used in the keynote presentation.
+
+This domain model is what was planned to be used initially, and very similar to what
+was used in practice; the final code is included in a more complex project integrating
+all the parts which will be published later this month; the final code has no significantly
+interesting changes compared to the initial plan, the single entity just contained some more
+fields [TODO provide link to full code when it's published].
+
+Consider it an example on how to configure Hibernate OGM, Infinispan, Hibernate Search,
+the JBoss Transaction Manager and how queries could be implemented to load the required
+statistics.
+
+I think this is a pretty creative use of Lucene, taking advantage of it's inverted index
+nature, and provides a far more efficient way to implement the required queries; also
+as you can see coding the standard queries it was very simple, and the resulting scalability
+is great.
+
+Please get in touch for any explanation needed, on the mailing list, forums or irc:
 
 https://forum.hibernate.org/
 http://hibernate.org/community/mailinglists
